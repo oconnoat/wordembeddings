@@ -19,7 +19,8 @@ It's probably a good example of how difficult it is for me to separate content w
 
 <link rel="stylesheet" type="text/css" href="css/reset.css" />
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css"
+href="http://fonts.googleapis.com/css?family=Righteous|Comfortaa">
 
 <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
 <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -62,6 +63,10 @@ It's probably a good example of how difficult it is for me to separate content w
         <i class="fa fa-twitter fa-large"></i>@
         <a href="https://www.twitter.com/uberalex">uberalex</a>
         </p>
+        <div id="logofoot">
+            <a href="http://www.dcu.ie"><img src="img/dcu.jpg" /></a>
+            <a href="http://www.adaptcentre.ie"><img src="img/adapt.png" /></a>
+        </div>
         <div class="notes">
             <!--speaker notes-->
             <p>You can see my notes and details here. Please do get in touch if
@@ -78,13 +83,6 @@ It's probably a good example of how difficult it is for me to separate content w
             documents. Each document has paragraphs, which are groups of
             sentences. The sentences themselves are made up of words, the
             punctuation between the words.</p>
-        </div>
-    </div>
-    <div id="Language" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <p>The quick, brown fox jumped over the lazy dog.</p>
-        <div class="notes">
-            <!--speaker notes-->
-            <p>Before we start some very simple basics about language as data.</p>
         </div>
     </div>
     <div id="Zipf" class="step" data-x="1200" data-y="0" data-z="-1000"
@@ -104,10 +102,12 @@ It's probably a good example of how difficult it is for me to separate content w
         <h1>The Distributional Hypothesis</h1>
         <h2>"a word is characterized by the company it keeps"</h2>
         <div id="Sentence">
-            <ol>
-                <li>Banks can create new money when they make a loan.</li>
-                <li>The boat struck the bank full tilt.</li>
+                        <ol>
+                            <li><p class="embed">Banks can create new money when they make a loan.</li>
+                            <li><p class="embed">The boat struck the bank full
+                            tilt.</p></li>
             </ol>
+            </p>
         </div>
         <div class="notes">
             <!--speaker notes-->
@@ -124,79 +124,100 @@ It's probably a good example of how difficult it is for me to separate content w
         <p>A <strong>Word Embedding</strong> is a parameterised function that
         maps words from a vocabulary to lower-dimension vectors of real
         weights</p>
-
-        <p>W('King') = [0.5, 0.7]</p>
-        <p>W('Man') = [0.5, 0.2]</p>
-
+        <ul>
+            <li><p class="embed">W('King') = [0.5, 0.7]</p></li>
+            <li><p class="embed">W('Man') = [0.5, 0.2]</p></li>
+        </ul>
         <div class="notes">
             <!--speaker notes-->
             <p></p>
         </div>
     </div>
+<div id="Vectors" class="step" data-x="2400" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <p class="small">Image Source: <a
+        href="https://www.tensorflow.org/versions/0.6.0/tutorials/word2vec/index.html
+        <">https://www.tensorflow.org/versions/0.6.0/tutorials/word2vec/index.html</a>
+    <div class="notes">
+        <!--speaker notes-->
+        So we can begin to see that the distributional hypothesis tells us
+        something more than just how words are used. It begins to tell us
+        how underlying relationships between concepts might exist.
+    </div>
+</div>
 
     <!-- Embedding Words for Fun &amp; Profit -->
     <div id="FunAndProfit" class="step" data-x="3600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <h1>Word2Vec (<a href="http://arxiv.org/abs/1310.4546">Mikolov et al.</a>)</small></h1>
-        <h2>The quick brown fox Jumped
-    <strong>over</strong><sub>(V<sub>in</sub>)</sub> the lazy dog.</h2>
-        <p>Maximise P(V<sub>out</sub>|V<sub>in</sub>)</p>
-        <div class="notes">
-            <!--speaker notes-->
-            <p><a href="http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/">http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/</a></p>
-            <p><a href="http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994">http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994</a></p>
-        </div>
+    <p class="embed">The quick brown fox Jumped
+    <strong>over</strong><sub>(V<sub>in</sub>)</sub> the lazy dog.</p><br /><br
+        />
+        <p>Maximise P(V<sub>out</sub>|V<sub>in</sub>) by learning the softmax
+        probability via gradient descent. </p>
+    <div class="notes">
+        <!--speaker notes-->
+        <p><a href="http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/">http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/</a></p>
+        <p><a href="http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994">http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994</a></p>
     </div>
-    <div id="Vectors" class="step" data-x="3600" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <p class="small">Image Source: <a
-            href="https://www.tensorflow.org/versions/0.6.0/tutorials/word2vec/index.html
-            <">https://www.tensorflow.org/versions/0.6.0/tutorials/word2vec/index.html</a>
-        <div class="notes">
-            <!--speaker notes-->
-            So we can begin to see that the distributional hypothesis tells us
-            something more than just how words are used. It begins to tell us
-            how underlying relationships between concepts might exist.
-        </div>
-    </div>
-    <div id="Translate" class="step" data-x="4800" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <img src="img/translate.png">
-        <ol>
-            <li>Learn Monolingual Word Embeddings from lots of text</li>
-            <li>Use a small bilingual dictionary to learn the linear projection</li>
-            <li>Project unknown word from source embedding to target</li>
-        </ol>
-
-        <div class="notes">
-            <p>Mikolov et. al, <a href="http://arxiv.org/abs/1309.4168">Exploiting Similarities among
-                Languages for Machine Translation</a></p>
-
-        </div>
+</div>
+<div id="operations" class="step" data-x="4800" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <h1>Operations on the embedding vector space</h1>
+    <p class="embed">King + Woman - Man = Queen</p>
+    <p class="embed">Obama + Russia - USA = Putin </p>
+    <p class="embed">Breakfast, <del>Cereal</del>, Lunch,&nbsp;Dinner </p>
+    <p class="embed">Bad is to Worse as Good is to Better</p>
+    <p class="embed"></b>
+<p>Use it to expand queries, find synonyms, disambiguate terms, group
+items</p>
+<div class="notes">
+    Doesn't always work predictably, and sometimes produces complete
+    nonsense. It's also often not bi-directional.
+</div>
 
     </div>
+    <div id="Translate" class="step" data-x="4800" data-y="4800" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+<img src="img/translate.png">
+<ol>
+    <li><p>Learn Monolingual Word Embeddings from lots of text</p></li>
+    <li><p>Use a small bilingual dictionary to learn the linear projection</p></li>
+    <li><p>Project unknown word from source embedding to target</p></li>
+</ol>
+
+<div class="notes">
+    <p>Mikolov et. al, <a href="http://arxiv.org/abs/1309.4168">Exploiting Similarities among
+        Languages for Machine Translation</a></p>
+
+</div>
+
+    </div>
+
 
 
     <!-- DIY -->
     <div id="DIY" class="step" data-x="3600" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1>Toolkits</h1>
-        <ul>
-            <li><a href="https://radimrehurek.com/gensim/">Gensim</a> (Python) </li>
-            <li><a href="http://nlp.stanford.edu/projects/glove/">GloVe</a></li>
-            <li><a
-                href="http://bookworm.benschmidt.org/posts/2015-10-25-Word-Embeddings.html">WEM</a>
-            (R) </li>
-        </ul>
-        <div class="notes">
-            <!--speaker notes-->
-            <p>A lot of people use the google newsgroups data.</p>
-        </div>
+<h2>Over to You</h2>
+<p>Need lots of pre-processed text, so pre-trained models can be a good place to start.</p>
+<p><a href="https://radimrehurek.com/gensim/">Gensim</a> (Python), <a
+href="http://nlp.stanford.edu/projects/glove/">GloVe</a>,<a
+        href="http://bookworm.benschmidt.org/posts/2015-10-25-Word-Embeddings.html">WEM
+    </a>(R)</p>
+    <p><a href="http://rare-technologies.com/making-sense-of-word2vec/">Making
+        Sense of Word2Vec</a>,<a
+        href="https://levyomer.wordpress.com/2014/04/25/linguistic-regularities-in-sparse-and-explicit-word-representations/">Levy
+        &amp; Goldberg</a> 'Linguistic Regularities in Sparse and Explicit Word
+    Representations.'</p>
+    <div class="notes">
+        <!--speaker notes-->
+        <p>A lot of people use the google newsgroups data.</p>
     </div>
-    <!-- Conclusion -->
-    <div id="Final" class="step" data-x="4800" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+</div>
+<!-- Conclusion -->
+<div id="Final" class="step" data-x="6000" data-y="6000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
 
-    </div>
-    <!-- keep an overview slide, you may wish to change the scaling and / or the co-ordinates -->
+</div>
+<!-- keep an overview slide, you may wish to change the scaling and / or the co-ordinates -->
 
-    <div id="overview" class="step" data-x="600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="2">
-    </div>
+<div id="overview" class="step" data-x="1200" data-y="1000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="2">
+</div>
 
 </div>
 <!-- end of impress -->
@@ -206,12 +227,12 @@ It's probably a good example of how difficult it is for me to separate content w
 
 <!-- a little menu based on the slides -->
 <div class="hint note">
-    <p>Use the spacebar or arrow keys to navigate</p>
+<p>Use the spacebar or arrow keys to navigate</p>
 </div>
 
 <!-- clicking on this reveals the quick-navigation bar -->
 <div id="menubutton" tabindex="1">
-    <i class="fa fa-bars fa-lg"></i>
+<i class="fa fa-bars fa-lg"></i>
 </div>
 
 <!-- quickly get to different slides here, the list is populated from the IDs of the slides -->
@@ -241,7 +262,7 @@ if ("ontouchstart" in document.documentElement) {
 
 <!-- Initialisation -->
 <script>impress().init();</script>
-<script>var time = 1000 * 60 * 15;
+<script>var time = 1000 * 60 * 10;
 var clock = timer(time, update);
 </script>
 </body>

@@ -26,6 +26,12 @@ div.hint {
     display: none;
 }
 /* Tag Markup */
+p {
+    font-family: 'Comfortaa', serif;
+}
+h1,h2{
+    font-family: 'Righteous', sans-serif;
+}
 div.step{
     min-width: 900px;
     min-height: 700px;
@@ -33,9 +39,14 @@ div.step{
 }
 
 div.step p {
-    text-align: justify;
+    text-align: left;
 }
-
+p.embed {
+    font-size: 36px;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+    margin: 1em;
+}
 p.small {
     font-size: 50%;
 }
@@ -70,7 +81,7 @@ strong{
 
 }
 .impress-on-title div.hint{
-   display: balock;
+   display: block;
    font-size: 14px;
    font-style: italic;
    text-align: center;
@@ -81,15 +92,39 @@ strong{
 }
 .impress-on-overview div:hover{
     opacity: 1;
-    background-color: #fff;
+    background-color: #fffff8;
 }
-
+ol {
+    list-style: decimal inside;
+}
+ul {
+    list-style: circle inside;
+}
+li {
+    margin: 0.5em;
+}
 /* specific divs */
 div#title h1{
     text-align: center;
     margin: 10px;
-    font-size: 256px;
-    font-family: 'Tangerine', sans-serif;
+    font-size: 120px;
+    font-family: 'Righteous', sans-serif;
+}
+div#title p{
+    text-align: center;
+}
+div#title div#logofoot{
+    width: 100%;
+    position: absolute;
+    top: 10px;
+        display: flex;
+    justify-content: space-between;
+}
+div#title div#logofoot a{ 
+    display: inline-block;
+}
+div#title div#logofoot img{
+    height: 100px;
 }
 .impress-on-Language{
  /*remember that this is in the css directory */
@@ -108,7 +143,7 @@ div#Language
     margin-left: -100px;
     min-height: 100px;
     min-width: 50%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(1,1,1,0.5);
 }
 .impress-on-Zipf{
  /*remember that this is in the css directory */
@@ -121,6 +156,15 @@ div#Language
 }
 div#Zipf {
     background: none;
+}
+.impress-on-Distributional{
+ /*remember that this is in the css directory */
+    background-image: url('../img/crowd.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
 }
 div#Distributional h1,h2{
    margin-bottom: 10%;
@@ -136,6 +180,19 @@ div#Distributional div#Sentence{
     position: absolute;
     font-size: 36px;
 }
+.impress-on-operations{
+ /*remember that this is in the css directory */
+    background-image: url('../img/operations.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+div#operations h1{
+    font-size: 60px;
+    text-align: center;
+}
 .impress-on-Vectors{
  /*remember that this is in the css directory */
     background-image: url('../img/relationships.png');
@@ -145,12 +202,77 @@ div#Distributional div#Sentence{
     background-height: 100%;
     background-width: 100%;
 }
+
 div#Vectors {
     background: none;
+}
+.impress-on-Translate{
+ /*remember that this is in the css directory */
+    background-image: url('../img/embed.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+div#Translate  img{
+    width:100%;
+}
+
+div#Translate ol{
+   font-size: 50%;
 }
 div#FunAndProfit h1,h2{
     margin-bottom: 10%;
 }
+.impress-on-DIY{
+ /*remember that this is in the css directory */
+    background-image: url('../img/craft.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+div#DIY {
+    background-color: rgba(255,255,248,0.5)
+}
+div#DIY p{
+    margin-bottom: 1em;
+}
+.impress-on-Final{
+ /*remember that this is in the css directory */
+    background-image: url('../img/landing.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+
+div#Final{
+    background: none;
+    
+}
+.impress-on-FunAndProfit{
+ /*remember that this is in the css directory */
+    background-image: url('../img/record.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+.impress-on-Embedding{
+ /*remember that this is in the css directory */
+    background-image: url('../img/measure.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
+
 div#overview {
     display: none;
 }
