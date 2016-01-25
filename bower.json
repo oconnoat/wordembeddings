@@ -1,0 +1,31 @@
+{
+  "name": "powerpress",
+  "version": "0.0.1",
+  "description": "Wrapper for impress.js which includes a few other tweaks and layouts",
+  "main": "index.html",
+  "keywords": [
+    "prezi",
+    "impress.js",
+    "powerpoint",
+    "slides",
+    "presentation"
+  ],
+  "authors": [
+    "Alexander O'Connor <Alex.OConnor@scss.tcd.ie>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "impress.js": "~0.5.3",
+    "d3": "~3.4.11",
+    "lodash": "~2.4.1",
+    "fontawesome": "~4.2.0",
+    "less.js": "~1.7.5"
+  }
+}

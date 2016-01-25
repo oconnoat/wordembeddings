@@ -1,0 +1,81 @@
+/* Custom CSS File for the impress presentation */
+/* To add Google Fonts, one option is to use @import(url('')); if you do, it must go before all other declarations except @charset
+ * another option is to create a font source block. This will allow you to have a local fallback. It also allows Truetype fallbacks an so on.
+ *
+ *
+ *
+ * An example block below 
+ * @font-face {
+ * font-family: 'Satisfy';
+ *  font-style: normal;
+ *  font-weight: 400;
+ *  src: local('Satisfy') url(http://themes.googleusercontent.com/static/fonts/satisfy/v4/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff) format('woff'),
+ *  local('Satisfy') url('Satisfy.woff') format('woff'); 
+ * }
+ *
+ *
+ * */
+
+/* hint and unsupported content */
+div.fallback-message {
+    display: none;
+}
+
+
+div.hint {
+    display: none;
+}
+/* Tag Markup */
+div.step{
+    min-width: 900px;
+    min-height: 700px;
+    font-size: 48px;
+    border: 1px solid red;
+}
+
+/* Impress-related markup */
+.impress-enabled .step.active {
+    background-color: #fff;:
+}
+
+/* make the non-active steps transparent */
+.step:not(.active) { opacity: 0.33; }
+
+/* Per-slide Markup uses .impress-on-slideID */
+.impress-not-supported div.fallback-message{
+    display: block;
+    height: 100px;
+    width: 250px;
+    margin-left: -125px;
+    margin-top: -50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}
+.impress-on-title div.hint{
+   display: block;
+   font-size: 14px;
+   font-style: italic;
+   text-align: center;
+   width: 250px;
+   position: absolute;
+   left: 50%;
+   margin-left: -125px;
+}
+.impress-on-overview div:hover{
+    opacity: 1;
+    background-color: #fff;
+}
+
+/* specific divs */
+div#title h1{
+    text-align: center;
+    margin: 10px;
+    font-size: 256px;
+    font-family: 'Tangerine', sans-serif;
+}
+
+div#overview {
+    display: none;
+}
