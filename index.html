@@ -3,38 +3,38 @@
 
 Released under the MIT and GPL (version 2 or later) Licenses.
 
-Note, this is a total mess of inconsistent css, html, javascript and content. 
+Note, this is a total mess of inconsistent css, html, javascript and content.
 It's probably a good example of how difficult it is for me to separate content with presentation in practice.
 -->
 
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title> </title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1024" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title> </title>
 
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
 
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 
-    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
-    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <!-- basic setup -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
-    <!-- menus and buttons -->
-    <link rel="stylesheet" type="text/css" href="css/navmenu.css" />
+<link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+<!-- basic setup -->
+<!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
+<!-- menus and buttons -->
+<link rel="stylesheet" type="text/css" href="css/navmenu.css" />
 
-    <!-- presentation-specific styling, which might be done with less instead of css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
+<!-- presentation-specific styling, which might be done with less instead of css -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
 
 
-    <link rel="shortcut icon" href="img/favicon.png" />
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+<link rel="shortcut icon" href="img/favicon.png" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 </head>
 
 <body class="impress-not-supported">
@@ -48,30 +48,153 @@ It's probably a good example of how difficult it is for me to separate content w
 </div>
 
 <div id="impress">
-    
+
     <!-- each slide must be a div with class step,  must have some co-ordinates -->
     <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1>Title Slide</h1> 
-        <p><i class="fa fa-twitter fa-large"></i>@twitter</p>
+        <h1>Word Embeddings</h1>
+        <h2>A Journey to Low-Dimensional Word Vector Space</h2>
+        <p>
+        <a href="mailto:Alexander.OConnor@dcu.ie">
+            Alexander.OConnor@dcu.ie
+        </a>
+        </p>
+        <p>
+        <i class="fa fa-twitter fa-large"></i>@
+        <a href="https://www.twitter.com/uberalex">uberalex</a>
+        </p>
         <div class="notes">
             <!--speaker notes-->
-            <p>Example Speaker Notes.</p>
+            <p>You can see my notes and details here. Please do get in touch if
+            you have any comments or questions.</p>
         </div>
     </div>
-    <div id="slide1" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1>Slide one</h1> 
+    <!-- Language and Defining Embeddings -->
+    <div id="Language" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <p>The quick, brown fox jumped over the lazy dog.</p>
         <div class="notes">
             <!--speaker notes-->
-            <p>Example Speaker Notes.</p>
+            <p>Before we start some very simple basics about language as data.
+            Normally when we think about language data, it's a corpus of
+            documents. Each document has paragraphs, which are groups of
+            sentences. The sentences themselves are made up of words, the
+            punctuation between the words.</p>
+        </div>
+    </div>
+    <div id="Language" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <p>The quick, brown fox jumped over the lazy dog.</p>
+        <div class="notes">
+            <!--speaker notes-->
+            <p>Before we start some very simple basics about language as data.</p>
+        </div>
+    </div>
+    <div id="Zipf" class="step" data-x="1200" data-y="0" data-z="-1000"
+        data-rotate-x="90" data-rotate-y="0" data-rotate-z="" data-scale="1">
+        <!--speaker notes-->
+        <div class="notes">Data follows the curve of a broken power law. The vast majority
+            of the uses of words come from a very small group. For a variety of
+            reasons, we use the same words repeatedly ('I', 'The', 'Is', etc)
+            <a href="https://en.wikipedia.org/wiki/Zipf%27s_law">https://en.wikipedia.org/wiki/Zipf%27s_law</a>
+            <p class="small">A plot of the rank versus frequency for the first
+            10 million words in 30 Wikipedias (dumps from October 2015) in a
+            log-log scale.</p>
+            </p>
+        </div>
+    </div>
+    <div id="Distributional" class="step" data-x="2400" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>The Distributional Hypothesis</h1>
+        <h2>"a word is characterized by the company it keeps"</h2>
+        <div id="Sentence">
+            <ol>
+                <li>Banks can create new money when they make a loan.</li>
+                <li>The boat struck the bank full tilt.</li>
+            </ol>
+        </div>
+        <div class="notes">
+            <!--speaker notes-->
+            <p>We can only learn the meaning of words from their asssociation
+            with other words.</p>
+            <p class="small">Firth, J.R. (1957). A synopsis of linguistic theory 1930-1955. In
+            Studies in Linguistic Analysis, pp. 1-32. Oxford: Philological
+            Society. Reprinted in F.R. Palmer (ed.), Selected Papers of J.R.
+            Firth 1952-1959, London: Longman (1968).<br />
+            Harris, Z. (1954). Distributional structure. Word, 10(23): 146-162.</p>
+        </div>
+    </div>
+    <div id="Embedding" class="step" data-x="2400" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <p>A <strong>Word Embedding</strong> is a parameterised function that
+        maps words from a vocabulary to lower-dimension vectors of real
+        weights</p>
+
+        <p>W('King') = [0.5, 0.7]</p>
+        <p>W('Man') = [0.5, 0.2]</p>
+
+        <div class="notes">
+            <!--speaker notes-->
+            <p></p>
         </div>
     </div>
 
-    <div id="d3slide" class="step" data-x="0" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <!-- Embedding Words for Fun &amp; Profit -->
+    <div id="FunAndProfit" class="step" data-x="3600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>Word2Vec (<a href="http://arxiv.org/abs/1310.4546">Mikolov et al.</a>)</small></h1>
+        <h2>The quick brown fox Jumped
+    <strong>over</strong><sub>(V<sub>in</sub>)</sub> the lazy dog.</h2>
+        <p>Maximise P(V<sub>out</sub>|V<sub>in</sub>)</p>
+        <div class="notes">
+            <!--speaker notes-->
+            <p><a href="http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/">http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/</a></p>
+            <p><a href="http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994">http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994</a></p>
+        </div>
+    </div>
+    <div id="Vectors" class="step" data-x="3600" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <p class="small">Image Source: <a
+            href="https://www.tensorflow.org/versions/0.6.0/tutorials/word2vec/index.html
+            <">https://www.tensorflow.org/versions/0.6.0/tutorials/word2vec/index.html</a>
+        <div class="notes">
+            <!--speaker notes-->
+            So we can begin to see that the distributional hypothesis tells us
+            something more than just how words are used. It begins to tell us
+            how underlying relationships between concepts might exist.
+        </div>
+    </div>
+    <div id="Translate" class="step" data-x="4800" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <img src="img/translate.png">
+        <ol>
+            <li>Learn Monolingual Word Embeddings from lots of text</li>
+            <li>Use a small bilingual dictionary to learn the linear projection</li>
+            <li>Project unknown word from source embedding to target</li>
+        </ol>
+
+        <div class="notes">
+            <p>Mikolov et. al, <a href="http://arxiv.org/abs/1309.4168">Exploiting Similarities among
+                Languages for Machine Translation</a></p>
+
+        </div>
+
     </div>
 
 
+    <!-- DIY -->
+    <div id="DIY" class="step" data-x="3600" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>Toolkits</h1>
+        <ul>
+            <li><a href="https://radimrehurek.com/gensim/">Gensim</a> (Python) </li>
+            <li><a href="http://nlp.stanford.edu/projects/glove/">GloVe</a></li>
+            <li><a
+                href="http://bookworm.benschmidt.org/posts/2015-10-25-Word-Embeddings.html">WEM</a>
+            (R) </li>
+        </ul>
+        <div class="notes">
+            <!--speaker notes-->
+            <p>A lot of people use the google newsgroups data.</p>
+        </div>
+    </div>
+    <!-- Conclusion -->
+    <div id="Final" class="step" data-x="4800" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
 
+    </div>
     <!-- keep an overview slide, you may wish to change the scaling and / or the co-ordinates -->
+
     <div id="overview" class="step" data-x="600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="2">
     </div>
 
@@ -119,7 +242,7 @@ if ("ontouchstart" in document.documentElement) {
 <!-- Initialisation -->
 <script>impress().init();</script>
 <script>var time = 1000 * 60 * 15;
-        var clock = timer(time, update);
+var clock = timer(time, update);
 </script>
 </body>
 </html>

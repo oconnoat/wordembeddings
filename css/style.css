@@ -30,12 +30,28 @@ div.step{
     min-width: 900px;
     min-height: 700px;
     font-size: 48px;
-    border: 1px solid red;
 }
 
+div.step p {
+    text-align: justify;
+}
+
+p.small {
+    font-size: 50%;
+}
+
+sub{
+    vertical-align: sub;
+    font-size: 66%;
+}
+
+strong{
+    font-weight: bold;
+}
 /* Impress-related markup */
 .impress-enabled .step.active {
-    background-color: #fff;:
+    background-color: #fffff8;:
+    color: #111111;
 }
 
 /* make the non-active steps transparent */
@@ -54,7 +70,7 @@ div.step{
 
 }
 .impress-on-title div.hint{
-   display: block;
+   display: balock;
    font-size: 14px;
    font-style: italic;
    text-align: center;
@@ -75,7 +91,66 @@ div#title h1{
     font-size: 256px;
     font-family: 'Tangerine', sans-serif;
 }
+.impress-on-Language{
+ /*remember that this is in the css directory */
+    background-image: url('../img/fox.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-height: 100%;
+    background-width: 100%;
+}
 
+div#Language
+{
+    color: white;
+    font-size: 72px;
+    margin-left: -100px;
+    min-height: 100px;
+    min-width: 50%;
+    background-color: rgba(0,0,0,0.5);
+}
+.impress-on-Zipf{
+ /*remember that this is in the css directory */
+    background-image: url('../img/zipf.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-height: 100%;
+    background-width: 100%;
+}
+div#Zipf {
+    background: none;
+}
+div#Distributional h1,h2{
+   margin-bottom: 10%;
+   text-align: center; 
+}
+div#Distributional h1{
+    font-size: 60px;
+}
+div#Distributional h2{
+    font-size: 48px;
+}
+div#Distributional div#Sentence{
+    position: absolute;
+    font-size: 36px;
+}
+.impress-on-Vectors{
+ /*remember that this is in the css directory */
+    background-image: url('../img/relationships.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-height: 100%;
+    background-width: 100%;
+}
+div#Vectors {
+    background: none;
+}
+div#FunAndProfit h1,h2{
+    margin-bottom: 10%;
+}
 div#overview {
     display: none;
 }
